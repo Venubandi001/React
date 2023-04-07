@@ -50,17 +50,10 @@ class TodoList extends React.Component{
         return(
             <>
             <h1>TOdo list </h1>
-            <Form action="" onSubmit={(e)=>{
-        e.preventDefault()
-       this.setState({
-        name:"",
-        todo:[...this.state.todo,this.state.name]
-       })
-    }}>
-            <input type="text" name="" id="m1" onChange={(e)=>{
-                this.setState({
-                    name:e.target.value
-                })
+            <Form action="" onSubmit={(e)=>{e.preventDefault() 
+            this.setState({name:"",todo:[...this.state.todo,this.state.name]})
+            console.log(this.state.todo);}}>
+            <input type="text" name="" id="m1" onChange={(e)=>{this.setState({name:e.target.value })
             }}/>
             <input type="submit" value="submit"/>
             <input type="reset" value="Reset" />
